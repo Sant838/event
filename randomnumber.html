@@ -1,0 +1,87 @@
+<!doctype html>
+	<html>
+	<head> 
+		<title> random number generator</title> 
+		<style> 
+        button{ 
+			height: 200px;
+			width: 200px; 
+			font-size: 80px;
+			background-color: red; 
+			border-radius: 50%; 
+			
+		} 
+		body{ 
+    background-color: cadetblue;  
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
+  
+    
+   
+    
+    
+}  
+		
+                 
+		 </style>
+	</head> 
+	<body> 
+		<div>
+		 <button  id="para"  onclick="change()">0</button>  
+		 <button  id="para1"  onclick="change3()">0</button> 
+		 <button  id="para2"  onclick="change1()">0</button>  
+		 <p id="time"></p> 
+		 <a href="F:/back santosh/a/html/javascript/backgroundchanger.html" id="apage"></a>
+
+		</div>
+		 <script>  
+		 var min,max;
+		 min=21;
+		 max=63; 
+		 sum=0;
+		 	//int v=Math.random(); 
+		 	function change(){ 
+
+		 	 var a= Math.floor(Math.random()*(max-min)+min);  
+			  document.getElementById("para").innerHTML=a;
+			sum=sum+a; 
+			document.getElementById("para1").innerHTML=sum;
+			
+		 }  
+		 
+		function change1(){  
+			console.log("hello");
+			var a= Math.floor(Math.random()*(max-min)+min);  
+			document.getElementById("para2").innerHTML=a;
+			sum=sum+a; 
+             document.getElementById("para1").innerHTML=sum; 
+        
+		}
+  
+  function change3(){ 
+	console.log("hello4");
+	if(sum<500)
+	{ 
+	 }
+	 else{ 
+		window.location.href="F:/back santosh/a/html/javascript/backgroundchanger.html"; 
+     sum=0; 
+	console.log("hello3")
+	 }
+}
+
+
+
+var today = new Date;
+document.getElementById("apage").innerHTML=today;
+
+/*
+function change(){ 
+
+Document.getElementById("para2").innerHTML=sum;
+
+}*/
+		 </script> 
+		</body>
+		</html>

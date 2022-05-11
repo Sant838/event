@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lcm</title> 
+    <style> 
+    body{ 
+        text-align: center;
+        
+        margin-left:5%;
+        background-color: #D8D8D8; 
+        text-decoration: solid black; 
+        display: flex;
+    }  
+    @media only screen and (max-width:500px)
+    { 
+       input{margin: 0; 
+   } 
+   body{ background-color: rosybrown; 
+        margin: 0; 
+    }#f1{margin: 0%;}
+    }
+  input{ 
+      margin-top:0px;  
+      margin: 20px;
+      width: 170px; 
+      height: 35px;
+  } 
+  #s{ 
+      text-align: center; 
+  } 
+  .btn{ 
+      background-color:#99ff99; 
+      font-size: large; 
+      font-weight: bolder; 
+      border-radius: 10px;
+  }
+  
+    
+  #f1{ 
+      height: 80%;
+      width: 60%; 
+      margin: 100px; 
+     padding: 50px;
+      background-color: #ffeecc;   
+      border-radius: 10px;
+
+  } 
+  .f2{ 
+      font-size: larger; 
+      color: solid black;
+      font-size: larger; 
+      font-weight: bolder; 
+      border-radius: 10px red;  
+     background-color: #ffccff;
+      
+  } 
+  span{ 
+      font-size: 40px; 
+      margin: 0%; 
+  } 
+  #third{ 
+      text-align: center;
+      width: 250px;  
+      color: black;
+  }
+
+       
+    </style>
+</head>
+<body>   
+    
+    
+    <div id="f1"> 
+        <h1>Calculator For LCM</h1>
+    <div>
+    <input type="text" id="first" placeholder=" first value" class="f2" >  
+    <input type="text" name="" id="second" placeholder="second value"class="f2"  > <span>=</span>
+    <input type="text" id="third" placeholder="Lcm" class="f2" > 
+
+</div>  
+<div id="s"> 
+    
+    <input type="button" value="Calculate" onclick="gcd()" class="btn"> 
+    <input type="button" value="Reset"onclick="reset()" class="btn">
+</div>  
+</div> 
+
+<script> 
+
+function gcd()
+{ var a=document.getElementById("first").value;
+ var b=document.getElementById("second").value;  
+
+ var c=Number(a);
+ var d=Number(b) ; 
+ let lcm;
+if(c<d)  
+{ 
+    let temp=c;
+    c=d;
+    d=temp;
+} 
+let k=c,j=d;
+let r=1;
+while(r)
+{ 
+    r=c%d;
+    c=d;
+
+    d=r; 
+    console.log(c,d,r);
+
+}  
+
+if(k==0||j==0) 
+document.getElementById("third").value=0;
+else
+{ 
+    lcm=(k*j)/c;
+document.getElementById("third").value=lcm; 
+}
+
+
+  
+   
+} 
+function reset(){ 
+    a=0;
+    b=0 
+    c=0 
+    document.getElementById("first").value="";
+   document.getElementById("third").value="" ;
+
+    document.getElementById("second").value="";
+
+}
+ </script>
+
+</body>
+</html>

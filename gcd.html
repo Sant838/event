@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style> 
+   
+     
+    body{ 
+        text-align: center;
+        
+        margin-left:4%;
+        background-color:#b3ffcc; 
+        text-decoration: solid black; 
+        display: flex;
+    }  
+    @media only screen and (max-width:500px)
+    { 
+       input{margin: 0; 
+   } 
+   body{ background-color: rosybrown; 
+        margin: 0; 
+    }#f1{margin: 0%;}
+    }
+  input{ 
+      margin-top:0px;  
+      margin: 20px;
+      width: 170px; 
+      height: 35px;
+  } 
+  #s{ 
+      text-align: center; 
+  } 
+  .btn{ 
+      background-color: lightgreen; 
+      font-size: large; 
+      font-weight: bolder; 
+      border-radius: 10px;
+  }
+  
+    
+  #f1{ 
+      height: 80%;
+      width: 60%; 
+      margin: 100px; 
+     padding: 50px;
+      background-color:lightblue;   
+      border-radius: 10px;
+
+  } 
+  .f2{ 
+      font-size: larger; 
+      color: solid black;
+      font-size: larger; 
+      font-weight: bolder; 
+      border-radius: 10px red; 
+      background-color:#ffe6ff;
+  } 
+  span{ 
+      font-size: 40px; 
+      margin: 0%; 
+  } 
+  #third{ 
+      text-align: center;
+      width: 250px;  
+      color: black;
+  }
+
+       
+    </style>
+</head>
+<body> 
+    <div id="f1">  
+        <h1>GCD Calculator</h1>
+        <div>
+    <input type="text" id="first" class="f2">  
+    
+    <input type="text" name="" id="second" class="f2">  <span>=</span>
+    <input type="text" id="third" class="f2"> 
+
+
+</div>  
+<div id="s"> 
+   
+    <input type="button" value="GCD" onclick="gcd()" class="btn"> 
+    <input type="button" value="Reset"onclick="reset()"class="btn" >
+</div>  
+</div>
+<script> 
+
+function gcd()
+{ var a=document.getElementById("first").value;
+ var b=document.getElementById("second").value;  
+
+ var c=Number(a);
+ var d=Number(b) ;
+if(c<d)  
+{ 
+    let temp=c;
+    c=d;
+    d=temp;
+}
+let r=1;
+while(r)
+{ 
+    r=c%d;
+    c=d;
+
+    d=r; 
+    console.log(c,d,r);
+
+}
+
+   document.getElementById("third").value=c;
+   
+} 
+function reset(){ 
+    a=0;
+    b=0 
+    c=0 
+    document.getElementById("first").value="";
+   document.getElementById("third").value="" ;
+
+    document.getElementById("second").value="";
+
+}
+ </script>
+
+</body>
+</html>

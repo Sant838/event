@@ -1,0 +1,126 @@
+ 
+ body{ 
+     background-color: antiquewhite;
+    
+    
+ } 
+ *{ 
+     margin: 0%;
+     padding: 0%;
+ }
+    
+    nav{ 
+    background-color: black;
+     
+     
+     color: white; 
+     height: 60px;
+
+}   
+nav ul li:hover{ 
+    cursor: pointer;  
+    background-color: aqua; 
+   
+
+} 
+nav ul{ 
+    display: flex; 
+    align-items: center;
+    list-style-type: none; 
+    height:50px; 
+    color: white; 
+    background-color: black;  
+    padding: 3px 0px; 
+
+
+color: aliceblue;
+   
+}
+    
+#spo{ 
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.brand img{ 
+    width: 44px; 
+
+} 
+.brand{ 
+    display: flex; 
+    align-items: center;
+} 
+nav ul li{ 
+    padding: 0 12px;
+} 
+.container{ 
+    height: 70vh; 
+    color: white; 
+    width: 70%;
+    background-color: black; 
+    display: flex;
+    margin: 23px auto; 
+    border-radius: 12px; 
+    padding:10px; 
+    background-image: url('maxresdefault.jpg'); 
+    overflow: scroll;
+    
+} 
+.bottom{  
+    position: sticky;
+    background-color: black; 
+    height: 70px;
+   color: white; 
+   display: flex;
+    
+    justify-content: center;
+    align-items: center;  
+    flex-direction: column; 
+   
+    
+
+} 
+#myprogress{   
+
+    align-items: center; 
+  width: 90%;  
+  cursor: pointer;
+} 
+.song{ 
+    height: 47px; 
+    display: flex; 
+    align-items: center;  
+   background-color: aliceblue;
+   color:black;
+    width: 100%; 
+    justify-items: center;
+    border-radius: 15px; 
+    margin: 12px 0; 
+   
+    
+}  
+.song1{ 
+    width: 80px; 
+    border-radius: 50%; 
+    padding-left: 12px;  
+    padding-right: 15px;
+    float:right;
+} 
+.song2{  
+    width: 30px;
+    padding-left: 8px; 
+  
+   
+} 
+.time{ 
+    margin: 0 23px; 
+    align-items: center; 
+  
+   display: flex;
+} 
+.ico{ 
+    width: 30px;  
+   
+    padding-top: 5px;
+    
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="http://www.example.org/register"> 
+        <label for="username">Create a username: </l abel> 
+        <input type="text" id="username" onblur="checkUsername()" /> 
+        <div id="feedback"></div> 
+        <label for="password">Create a password: </label> 
+        <input type="password" id="password" /> 
+        <input type="submit" value="Sign up!" /> 
+        </form> 
+        <script> 
+          function checkUsername()
+          { 
+              var msg1=document.getElementById("feedback");
+              var username1=document.getElementById("username");
+              if(username1.value.length<5) 
+              {
+              msg1.textContent="user length less than5"; 
+              checkUsername();
+              }
+          }
+          </script>
+</body>
+</html>
